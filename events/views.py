@@ -6,6 +6,10 @@ from django.utils import timezone
 from .models import Event, EventCategory, EventRegistration
 
 
+def health(request):
+    return JsonResponse({"status": "ok"})
+
+
 def event_list(request):
     """Display list of upcoming events"""
     events = Event.objects.filter(
