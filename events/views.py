@@ -7,6 +7,7 @@ from .models import Event, EventCategory, EventRegistration
 
 
 def health(request):
+    """Liveness check for deploys and monitoring"""
     return JsonResponse({"status": "ok"})
 
 
